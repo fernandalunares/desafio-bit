@@ -1,0 +1,98 @@
+
+*{
+  padding: 5px;
+}
+.admin-panel {
+  background-color: #f7f7f7;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 10px;
+}
+
+.dashboard-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  
+}
+
+.dashboard-card span {
+ text-align: center;
+ font-weight: bold;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-card h1{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.dashboard-card-title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.top-selling-products__title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.top-selling-products__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.top-selling-products__card {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 200px;
+  margin: 2px;
+  transition: box-shadow 0.3s;
+}
+
+.top-selling-products__card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.top-selling-products__card h4 {
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+
+.top-selling-products__card img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.top-selling-products__card p {
+  font-size: 16px;
+  margin-bottom: 2px;
+text-align: left;
+}
