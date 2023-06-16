@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import TotalProducts from '../src/totalProducts.js';
 import TotalOrders from '../src/totalOrders.js';
-import TotalRevenue from '../src/totalRevenue.js';
-import AveragePrice from '../src/averagePrice.js';
 import TopSellingProducts from '../src/topSellingProducts.js';
 import './dashboard.css';
 
@@ -64,7 +62,7 @@ const Dashboard = () => {
       }, []);
 
       const sortedProducts = soldProducts.sort((a, b) => b.quantity - a.quantity);
-      const topProducts = sortedProducts.slice(0, 5);
+      const topProducts = sortedProducts.slice(0, 8);
 
       setTopSellingProducts(topProducts);
     };
@@ -80,7 +78,7 @@ const Dashboard = () => {
         <p>{error}</p>
       ) : (
         <div>
-          <h1>Panel de Control</h1>
+          <h1>Panel de Administrador</h1>
           <div className="dashboard-grid">
             <div className="dashboard-card">
               <TotalProducts products={products} />
@@ -88,15 +86,9 @@ const Dashboard = () => {
             <div className="dashboard-card">
               <TotalOrders carts={carts} />
             </div>
-            <div className="dashboard-card">
-              <TotalRevenue topSellingProducts={topSellingProducts} />
-            </div>
-            <div className="dashboard-card">
-              <AveragePrice products={products} />
-            </div>
-          </div>
+                   </div>
           <div className="dashboard-card">
-            <div className="dashboard-card-title">Productos Más Vendidos</div>
+            <div className="dashboard-card-title">Top Ventas</div>
             <TopSellingProducts carts={carts} products={products} />
           </div>
         </div>
